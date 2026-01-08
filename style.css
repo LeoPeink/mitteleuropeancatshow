@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #222;
+}
+
+/* HEADER sticky*/
+.header {
+  font-size: x-large;
+  position: sticky;
+  top: 0;
+  min-height: 100px; /*TODO sistema dimensioni */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: #0b3c78;
+  color: #fff;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: large;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  color: white;
+  font-size: 22px;
+  border: none;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #0b3c78, #145fb3);
+  color: white;
+  text-align: center;
+  padding: 80px 20px; /* TODO sistema dimensioni */
+}
+
+.hero h1 {
+  margin-bottom: 10px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.highlight {
+  background: #f2f6fb;
+  text-align: center;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #eaeaea;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* BUTTONS */
+.primary-btn,
+.secondary-btn {
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.primary-btn {
+  background: #0b3c78;
+  color: white;
+}
+
+.secondary-btn {
+  background: #ffc400;
+  color: #000;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #0b3c78;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav a {
+    padding: 10px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+}
