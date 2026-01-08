@@ -1,0 +1,8 @@
+{
+      "workers_dev": true,
+	    "name": "worker-name",
+	    "compatibility_date": "2026-01-08",
+	    "assets": {
+	      "directory": "./"
+	    }
+	  }
