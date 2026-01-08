@@ -10,6 +10,61 @@ body {
   color: #222;
 }
 
+/* CONSTRUCTION PAGE */
+.construction-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0b3c78, #145fb3);
+  padding: 20px;
+}
+
+.construction-content {
+  text-align: center;
+  color: white;
+  max-width: 600px;
+}
+
+.construction-logo {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.construction-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.stay-tuned {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffc400;
+  margin-bottom: 15px;
+}
+
+.coming-soon {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .construction-content h1 {
+    font-size: 2rem;
+  }
+  
+  .stay-tuned {
+    font-size: 1.5rem;
+  }
+  
+  .construction-logo {
+    max-width: 250px;
+  }
+}
+
 /* HEADER sticky*/
 .header {
   font-size: x-large;
@@ -17,15 +72,24 @@ body {
   top: 0;
   min-height: 100px; /*TODO sistema dimensioni */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 14px 20px;
   background: #0b3c78;
   color: #fff;
+  z-index: 1000;
 }
 
 .logo {
   font-weight: bold;
+  position: absolute;
+  left: 20px;
+}
+
+.logo img {
+  height: 100%;
+  max-height: 80px;
+  width: auto;
 }
 
 .nav {
@@ -37,6 +101,10 @@ body {
   color: white;
   text-decoration: none;
   font-size: large;
+}
+
+.nav a:hover {
+  text-decoration: underline;
 }
 
 .menu-toggle {
