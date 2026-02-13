@@ -1,0 +1,329 @@
+/* CONSTRUCTION PAGE STYLES */
+
+.construction-container {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(11, 60, 120, 0.85), rgba(20, 95, 179, 0.85)), 
+              url('../img/FVG/FVG_BLUE.png') 55% center/45%  no-repeat;
+  padding: 10px 40px;
+  position: relative;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  flex-direction: row;
+  z-index: 1;
+}
+
+.construction-content {
+  text-align: center;
+  color: white;
+  max-width: 600px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 50;
+}
+
+.construction-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.construction-logo {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 50;
+  opacity: 0.9;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.construction-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.stay-tuned {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffc400;
+  margin-bottom: 15px;
+}
+
+.coming-soon {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Logo Orbit Container */
+.logo-orbit-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  z-index: 100;
+}
+
+/* Cat Bubbles Rotating Animation */
+.cat-bubble {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border: 2px solid #ffd700;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5), 0 0 15px rgba(255, 215, 0, 0.3);
+  top: 50%;
+  left: 50%;
+  animation: rotateAroundLogo 20s linear infinite;
+  border-radius: 50%;
+  background: #ffd700;
+  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.7));
+  z-index: 100;
+}
+
+.cat-bubble img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  clip-path: inherit;
+}
+
+/* Individual bubble animations */
+.cat-bubble[data-angle="0"] { 
+  animation: rotate0 20s linear infinite;
+}
+.cat-bubble[data-angle="36"] { 
+  animation: rotate36 20s linear infinite;
+}
+.cat-bubble[data-angle="72"] { 
+  animation: rotate72 20s linear infinite;
+}
+.cat-bubble[data-angle="108"] { 
+  animation: rotate108 20s linear infinite;
+}
+.cat-bubble[data-angle="144"] { 
+  animation: rotate144 20s linear infinite;
+}
+.cat-bubble[data-angle="180"] { 
+  animation: rotate180 20s linear infinite;
+}
+.cat-bubble[data-angle="216"] { 
+  animation: rotate216 20s linear infinite;
+}
+.cat-bubble[data-angle="252"] { 
+  animation: rotate252 20s linear infinite;
+}
+.cat-bubble[data-angle="288"] { 
+  animation: rotate288 20s linear infinite;
+}
+.cat-bubble[data-angle="324"] { 
+  animation: rotate324 20s linear infinite;
+}
+
+/* Under Construction Page 
+.under-construction {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}*/
+
+.construction-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.under-construction h2 {
+  color: #0b3c78;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.under-construction p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.construction-list {
+  text-align: left;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #0b3c78;
+}
+
+.construction-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Side Logos */
+.side-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  opacity: 0.9;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.anfi-logo {
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+  max-width: clamp(120px, 15vw, 200px);
+}
+
+.fife-logo {
+  max-width: clamp(80px, 12vw, 140px);
+  padding: 8px;
+}
+
+.side-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.side-logo img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.side-logos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 1200px) {
+  .construction-container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+    flex-wrap: nowrap;
+  }
+
+  .side-logo {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .anfi-logo {
+    max-width: 280px;
+  }
+
+  .fife-logo {
+    max-width: 180px;
+  }
+
+  .construction-logo {
+    max-width: 250px;
+  }
+
+  .cat-bubble {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .construction-container {
+    gap: 30px;
+    padding: 30px 15px;
+  }
+
+  .side-logo {
+    max-width: 250px;
+  }
+
+  .anfi-logo {
+    max-width: 240px;
+  }
+
+  .fife-logo {
+    max-width: 150px;
+  }
+
+  .construction-logo {
+    max-width: 200px;
+  }
+
+  .cat-bubble {
+    width: 80px;
+    height: 80px;
+  }
+
+  .construction-content h1 {
+    font-size: 2rem;
+  }
+
+  .stay-tuned {
+    font-size: 1.5rem;
+  }
+
+  .coming-soon {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .construction-container {
+    gap: 25px;
+    padding: 20px 10px;
+  }
+
+  .side-logo {
+    max-width: 200px;
+  }
+
+  .anfi-logo {
+    max-width: 180px;
+    padding: 8px;
+  }
+
+  .fife-logo {
+    max-width: 120px;
+    padding: 8px;
+  }
+
+  .construction-logo {
+    max-width: 160px;
+  }
+
+  .cat-bubble {
+    width: 60px;
+    height: 60px;
+  }
+
+  .construction-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .stay-tuned {
+    font-size: 1.2rem;
+  }
+
+  .coming-soon {
+    font-size: 0.9rem;
+  }
+}

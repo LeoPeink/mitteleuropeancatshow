@@ -1,213 +1,50 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* MAIN STYLESHEET - IMPORTS ALL MODULAR CSS FILES */
 
-body {
-  line-height: 1.6;
-  color: #222;
-}
+/* Base Styles */
+@import url('css/base.css');
 
-/* CONSTRUCTION PAGE */
-.construction-container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #0b3c78, #145fb3);
-  padding: 20px;
-}
+/* Animations */
+@import url('css/animations.css');
 
-.construction-content {
-  text-align: center;
-  color: white;
-  max-width: 600px;
-}
+/* Header and Navigation */
+@import url('css/header.css');
 
-.construction-logo {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  margin-bottom: 30px;
-}
+/* Hero Sections */
+@import url('css/hero.css');
 
-.construction-content h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
+/* Buttons */
+@import url('css/buttons.css');
 
-.stay-tuned {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ffc400;
-  margin-bottom: 15px;
-}
+/* Construction Page */
+@import url('css/construction.css');
 
-.coming-soon {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
+/* Carousel and Gallery */
+@import url('css/carousel.css');
 
-@media (max-width: 768px) {
-  .construction-content h1 {
-    font-size: 2rem;
-  }
-  
-  .stay-tuned {
-    font-size: 1.5rem;
-  }
-  
-  .construction-logo {
-    max-width: 250px;
-  }
-}
+/* Cards */
+@import url('css/cards.css');
 
-/* HEADER sticky*/
-.header {
-  font-size: x-large;
-  position: sticky;
-  top: 0;
-  min-height: 100px; /*TODO sistema dimensioni */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 14px 20px;
-  background: #0b3c78;
-  color: #fff;
-  z-index: 1000;
-}
+/* Tables */
+@import url('css/tables.css');
 
-.logo {
-  font-weight: bold;
-  position: absolute;
-  left: 20px;
-}
+/* Forms */
+@import url('css/forms.css');
 
-.logo img {
-  height: 100%;
-  max-height: 80px;
-  width: auto;
-}
+/* Program Page */
+@import url('css/program.css');
 
-.nav {
-  display: flex;
-  gap: 20px;
-}
+/* Dinner Page */
+@import url('css/dinner.css');
 
-.nav a {
-  color: white;
-  text-decoration: none;
-  font-size: large;
-}
+/* Contacts Page */
+@import url('css/contacts.css');
 
-.nav a:hover {
-  text-decoration: underline;
-}
+/* Footer */
+@import url('css/footer.css');
 
-.menu-toggle {
-  display: none;
-  background: none;
-  color: white;
-  font-size: 22px;
-  border: none;
-}
+/* Utilities */
+@import url('css/utilities.css');
 
-/* HERO */
-.hero {
-  background: linear-gradient(135deg, #0b3c78, #145fb3);
-  color: white;
-  text-align: center;
-  padding: 80px 20px; /* TODO sistema dimensioni */
-}
-
-.hero h1 {
-  margin-bottom: 10px;
-}
-
-/* SECTIONS */
-.section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.section h2 {
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.highlight {
-  background: #f2f6fb;
-  text-align: center;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 15px;
-}
-
-.card {
-  background: #eaeaea;
-  padding: 30px;
-  text-align: center;
-  border-radius: 8px;
-}
-
-/* BUTTONS */
-.primary-btn,
-.secondary-btn {
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.primary-btn {
-  background: #0b3c78;
-  color: white;
-}
-
-.secondary-btn {
-  background: #ffc400;
-  color: #000;
-}
-
-/* FOOTER */
-.footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 14px;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .nav {
-    display: none;
-    flex-direction: column;
-    background: #0b3c78;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .nav a {
-    padding: 10px 20px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav.open {
-    display: flex;
-  }
+#registration {
+  scroll-margin-top: 150px;
 }

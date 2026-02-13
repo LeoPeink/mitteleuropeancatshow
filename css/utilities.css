@@ -1,0 +1,47 @@
+/* UTILITIES AND HELPER CLASSES */
+
+/* Links */
+.website-link, .email-link {
+  color: #0b3c78;
+  text-decoration: none;
+  font-weight: 600;
+  background: linear-gradient(135deg, rgba(11, 60, 120, 0.1), rgba(20, 95, 179, 0.1));
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.website-link:hover, .email-link:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #0b3c78, #145fb3);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(11, 60, 120, 0.3);
+}
+
+/* Future Hotels Notice */
+.future-hotels {
+  margin-top: 20px;
+}
+
+/* Contact Info (general) */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  columns: 4;
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #e8f4fd;
+  border-radius: 10px;
+  border: 2px solid #0b3c78;
+}
+
+.contact-info h3 {
+  color: #0b3c78;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.contact-info p {
+  margin: 0;
+  color: #333;
+}

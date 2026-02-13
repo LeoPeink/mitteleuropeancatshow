@@ -1,0 +1,178 @@
+/* TABLES */
+
+/* Payment Table */
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.payment-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+.payment-table tr:last-child td {
+  border-bottom: none;
+}
+
+.payment-table td:first-child {
+  background: #f8f9fa;
+  font-weight: 500;
+  width: 30%;
+  color: #495057;
+}
+
+/* Price Table (in hotel cards) */
+.price-table {
+  background: white;
+  border-radius: 16px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(11, 60, 120, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(11, 60, 120, 0.05);
+  transition: background 0.2s ease;
+}
+
+.price-row:hover {
+  background: rgba(11, 60, 120, 0.02);
+  border-radius: 8px;
+  margin: 0 -8px;
+  padding: 8px 8px;
+}
+
+.price-row:last-child {
+  border-bottom: none;
+}
+
+.room-type {
+  font-weight: 500;
+  color: #495057;
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+/* Entry Fees Table */
+.entry-fees-table {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+.fees-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.category .details {
+  font-style: italic;
+  color: #888;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.fees-table thead {
+  background: linear-gradient(135deg, #0b3c78, #145fb3);
+  color: #ffca56;
+}
+
+.fees-table th {
+  padding: 20px 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.category-header {
+  width: 60%;
+}
+
+.price-header {
+  width: 20%;
+  text-align: center;
+}
+
+.fees-table tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s ease;
+}
+
+.fees-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.fees-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.fees-table td {
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.category {
+  color: #333;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.price {
+  text-align: center;
+  font-weight: bold;
+  color: #0b3c78;
+  font-size: 1.1rem;
+}
+
+.price.free {
+  color: #28a745;
+  background: linear-gradient(135deg, rgba(40, 167, 69, 0.1), rgba(40, 167, 69, 0.05));
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.special-offer {
+  background: linear-gradient(135deg, rgba(255, 202, 86, 0.1), rgba(255, 202, 86, 0.05));
+}
+
+.special-offer .category {
+  color: #0b3c78;
+  font-weight: 600;
+}
+
+.special-offer:hover {
+  background: linear-gradient(135deg, rgba(255, 202, 86, 0.15), rgba(255, 202, 86, 0.08));
+}
+
+/* IBAN Display */
+.iban {
+  font-family: 'Courier New', monospace;
+  background: #e9ecef;
+  padding: 8px;
+  border-radius: 3px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}

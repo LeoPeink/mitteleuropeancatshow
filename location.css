@@ -1,0 +1,576 @@
+/* LOCATION PAGE STYLES */
+
+.location-main {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.location-hero {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9)),
+              url('img/venue/venue-hero-bg.jpg') center/cover;
+  padding: 100px 20px 80px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.location-hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.location-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Location Details */
+.location-details {
+  padding: 50px 0;
+  background: linear-gradient(135deg, rgba(248, 249, 250, 0.95), rgba(248, 249, 250, 0.95)), 
+              url('img/FVG/FVG_BLUE.png') 55% center/45% no-repeat;
+}
+
+.venue-details h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Address Subtitle Styling - More prominent as subtitle */
+.venue-details h4 {
+  text-align: center;
+  margin: 0 auto 2.5rem auto;
+  max-width: 500px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 20px 30px;
+  border-radius: 30px;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+
+.venue-details h4 a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  display: block;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.venue-details h4:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #5a6fd8, #6b4ec9);
+}
+
+.venue-details h4 a:hover {
+  color: #ffca56;
+  text-decoration: none;
+}
+
+/* Address and Transport Side by Side */
+.venue-address-transport {
+  margin-bottom: 3rem;
+}
+
+.venue-info-combined {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.venue-info-combined h3 {
+  font-size: 1.8rem;
+  color: #667eea;
+  margin-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.venue-details-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2.5rem;
+}
+
+.address-section h4,
+.transport-section h4 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-align: left !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.address-section h4::before,
+.transport-section h4::before {
+  content: none !important;
+}
+
+.address-section p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.transport-methods,
+.transport-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transport-method,
+.transport-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.transport-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.transport-details strong {
+  display: block;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.transport-details p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+.transport-details em {
+  color: #667eea;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.venue-address,
+.venue-info,
+.transport-info {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.venue-address h3,
+.venue-info h3,
+.transport-info h3 {
+  font-size: 1.5rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.venue-address p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+.venue-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.venue-info li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1.05rem;
+  color: #555;
+}
+
+.venue-info li:last-child {
+  border-bottom: none;
+}
+
+/* Transport Options */
+.transport-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.transport-option {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.transport-option h4 {
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.transport-option p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Venue Gallery Carousel */
+.venue-gallery {
+  padding: 40px 0 50px;
+  background: white;
+}
+
+.venue-gallery h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.gallery-carousel {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.carousel-container {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+.carousel-overlay span {
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.carousel-btn:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-btn-prev {
+  left: 20px;
+}
+
+.carousel-btn-next {
+  right: 20px;
+}
+
+/* Dots Indicator */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 0;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+  background: white;
+  transform: scale(1.2);
+}
+
+/* Map Section */
+.location-map {
+  padding: 50px 0;
+  background: #f8f9fa;
+}
+
+.location-map h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+/* Dual Maps Container */
+.maps-dual-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.map-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.map-container h3 {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  margin: 0;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.google-map {
+  width: 100%;
+  height: 350px;
+  border: none;
+  display: block;
+}
+
+.map-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #667eea;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.map-link:hover {
+  background: #5a6fd8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* Contact Location */
+.contact-location {
+  padding: 50px 0;
+  background: white;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-details p {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Edition Info Styling */
+.header-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  padding: 0 2rem;
+  z-index: 10;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .location-hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .location-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .venue-details h2 {
+    font-size: 2rem;
+  }
+  
+  .venue-gallery h2,
+  .location-map h2 {
+    font-size: 2rem;
+  }
+  
+  /* Mobile carousel adjustments */
+  .carousel-image {
+    height: 350px;
+  }
+  
+  .carousel-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.8rem;
+  }
+  
+  .carousel-btn-prev {
+    left: 10px;
+  }
+  
+  .carousel-btn-next {
+    right: 10px;
+  }
+  
+  .carousel-overlay {
+    padding: 1.5rem 1rem 1rem;
+  }
+  
+  .carousel-overlay span {
+    font-size: 1rem;
+  }
+  
+  /* Mobile: Stack address and transport vertically */
+  .venue-details-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .transport-method {
+    padding: 0.8rem;
+  }
+  
+  .transport-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .map-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Mobile: Stack maps vertically */
+  .maps-dual-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .google-map {
+    height: 250px;
+  }
+  
+  .venue-address,
+  .venue-info,
+  .transport-info {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-right {
+    right: 1rem;
+  }
+  
+  .edition-info {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+}

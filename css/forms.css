@@ -1,0 +1,312 @@
+/* FORMS AND REGISTRATION STYLES */
+
+/* Entry Information Sections */
+.entry-info-section {
+  margin: 40px 0;
+}
+
+.entry-info-section > div {
+  background: rgba(255, 255, 255, 0.95);
+  margin-bottom: 30px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #0b3c78;
+}
+
+.entry-info-section h3 {
+  color: #0b3c78;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.entry-info-section h4 {
+  color: #145fb3;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.entry-info-section p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Payment Notice */
+.payment-notice .highlight-text {
+  background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+  padding: 15px;
+  border-left: 4px solid #ffc107;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #856404;
+  margin-bottom: 20px;
+}
+
+/* Special Competitions */
+.special-competitions {
+  border-left-color: #28a745 !important;
+}
+
+.competition-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.competition-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.competition-list li:last-child {
+  border-bottom: none;
+}
+
+.deadline {
+  background: #e8f5e8;
+  padding: 12px;
+  border-radius: 5px;
+  border-left: 3px solid #28a745;
+  font-weight: 500;
+}
+
+/* Registration Boxes */
+.registration-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.registration-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #0b3c78;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.registration-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.registration-box h4 {
+  color: #0b3c78;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 10px;
+}
+
+.anfi-members {
+  border-top-color: #28a745;
+}
+
+.anfi-members h4 {
+  color: #28a745;
+}
+
+.non-anfi {
+  border-top-color: #17a2b8;
+}
+
+.non-anfi h4 {
+  color: #17a2b8;
+}
+
+.registration-box p {
+  margin-bottom: 12px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.registration-box .form-links {
+  margin-top: 15px;
+}
+
+.registration-box .link-button {
+  display: block;
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 10px 12px;
+}
+
+.anfi-members .link-button {
+  background: linear-gradient(135deg, #28a745, #34ce57);
+}
+
+.anfi-members .link-button:first-child {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.anfi-members .link-button:first-child::before {
+  content: '⚠️ Stay tuned - Le iscrizioni apriranno a breve!';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffc107, #ffca56);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-weight: 600;
+  color: #333;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.anfi-members .link-button:first-child:hover::before {
+  opacity: 1;
+}
+
+.anfi-members .link-button:first-child:hover {
+  box-shadow: 0 6px 15px rgba(255, 202, 86, 0.4);
+}
+
+.anfi-members .link-button:hover {
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.non-anfi .link-button {
+  background: linear-gradient(135deg, #17a2b8, #20c997);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.non-anfi .link-button::before {
+  content: '⚠️ Stay tuned - Le iscrizioni apriranno a breve!';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffc107, #ffca56);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-weight: 600;
+  color: #333;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.non-anfi .link-button:hover::before {
+  opacity: 1;
+}
+
+.non-anfi .link-button:hover {
+  box-shadow: 0 6px 15px rgba(255, 202, 86, 0.4);
+}
+
+/* Form Links */
+.form-links {
+  margin-top: 20px;
+}
+
+/* Warning Section */
+.warning-section {
+  border-left-color: #dc3545 !important;
+  background: rgba(248, 215, 218, 0.3) !important;
+}
+
+.warning-section h3 {
+  color: #dc3545 !important;
+}
+
+/* Important Note */
+.important-note {
+  border-left-color: #17a2b8 !important;
+  background: rgba(209, 236, 241, 0.3) !important;
+}
+
+.important-note h3 {
+  color: #17a2b8 !important;
+}
+
+.important-note ul {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.important-note li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.payment-requirement {
+  background: #fff3cd;
+  padding: 12px;
+  border-radius: 5px;
+  border-left: 3px solid #ffc107;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+/* Payment Details */
+.payment-details {
+  border-left-color: #6c757d !important;
+}
+
+.payment-info {
+  margin-top: 15px;
+}
+
+/* Registration Deadline */
+.registration-deadline {
+  background: linear-gradient(135deg, #0b3c78 0%, #062245 100%);
+  border: 2px solid #ffca56;
+  border-radius: 12px;
+  padding: 20px 25px;
+  margin: 30px 0;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.registration-deadline::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff6b6b, #ffa726, #ff6b6b);
+  border-radius: 12px;
+  z-index: -1;
+  animation: borderGlow 2s ease-in-out infinite alternate;
+}
+
+.registration-deadline p {
+  margin: 0;
+  color: #ffca56;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.registration-deadline strong {
+  font-weight: 700;
+  text-transform: uppercase;
+}

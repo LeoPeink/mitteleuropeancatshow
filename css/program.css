@@ -1,0 +1,258 @@
+/* PROGRAM PAGE STYLES */
+
+/* Full width container for program page on desktop */
+@media (min-width: 769px) {
+  .content-section .container {
+    max-width: 95%;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+.program-schedule {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.day-schedule {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.day-schedule:hover {
+  transform: translateY(-5px);
+}
+
+.day-schedule h2 {
+  background: linear-gradient(135deg, #0b3c78, #145fb3);
+  color: #ffca56;
+  padding: 20px;
+  margin: 0;
+  font-size: 1.8rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+.schedule-timeline {
+  padding: 20px;
+}
+
+.time-slot {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s ease;
+}
+
+.time-slot:hover {
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin: 0 -10px;
+  padding: 15px 10px;
+}
+
+.time-slot:last-child {
+  border-bottom: none;
+}
+
+.time-slot.highlight {
+  background: linear-gradient(135deg, rgba(255, 202, 86, 0.1), rgba(255, 202, 86, 0.05));
+  border-radius: 8px;
+  margin: 5px -10px;
+  padding: 15px 10px;
+  border: 1px solid rgba(255, 202, 86, 0.2);
+}
+
+.time-slot.important {
+  background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(220, 53, 69, 0.05));
+  border-radius: 8px;
+  margin: 5px -10px;
+  padding: 15px 10px;
+  border: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+.time {
+  font-weight: bold;
+  color: #0b3c78;
+  min-width: 140px;
+  font-size: 1rem;
+  margin-right: 15px;
+}
+
+.activity {
+  flex: 1;
+  color: #333;
+  line-height: 1.4;
+}
+
+.time-slot.important .time {
+  color: #dc3545;
+}
+
+.time-slot.important .activity {
+  font-weight: 600;
+}
+
+/* Participation Rules */
+.participation-rules {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.participation-rules h2 {
+  color: #0b3c78;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 3px solid #ffca56;
+  padding-bottom: 15px;
+}
+
+.participation-rules h3 {
+  color: #0b3c78;
+  font-size: 1.3rem;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.rules-content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.rules-content ul {
+  margin: 15px 0 25px 20px;
+}
+
+.rules-content li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.committee-note {
+  background: #f8f9fa;
+  border-left: 4px solid #ffca56;
+  padding: 15px 20px;
+  margin-top: 30px;
+  font-style: italic;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Exhibition Rules */
+.exhibition-rules {
+  margin: 3rem 0;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  border-left: 5px solid #ff6b6b;
+}
+
+.exhibition-rules h3 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-bottom: 2px solid #ff6b6b;
+  padding-bottom: 1rem;
+}
+
+.rules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.rule-item {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #ff6b6b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rule-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.rule-item strong {
+  color: #ff6b6b;
+  font-size: 1.1rem;
+  display: inline;
+  font-weight: 600;
+}
+
+.rule-item p {
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* Veterinary Requirements */
+.veterinary-requirements {
+  margin: 3rem 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  border-left: 5px solid #667eea;
+}
+
+.veterinary-requirements h3 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 1rem;
+}
+
+.vet-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.vet-requirement {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #667eea;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vet-requirement:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.vet-requirement h4 {
+  color: #667eea;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.vet-requirement p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.vet-requirement strong {
+  color: #333;
+  font-weight: 600;
+}

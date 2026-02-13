@@ -1,0 +1,434 @@
+/* JUDGES PAGE SPECIFIC STYLES */
+
+/* Keyframe animation for golden shimmer effect */
+@keyframes golden-shimmer {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+.judges-main {
+  min-height: calc(100vh - 200px);
+}
+
+.judges-hero {
+  background: linear-gradient(135deg, #0b3c78, #145fb3);
+  color: white;
+  text-align: center;
+  padding: 5px 5px 10px;
+}
+
+.judges-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.judges-hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.judges-grid-section {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, rgba(248, 249, 250, 0.90), rgba(248, 249, 250, 0.90)), 
+              url('img/FVG/FVG_BLUE.png') 55% center/45% no-repeat;
+}
+
+.judges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Force exactly 6 cards in 3x2 layout on desktop */
+@media (min-width: 769px) {
+  .judges-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+/* 2x3 layout for medium screens */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .judges-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.judge-card {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(5px);
+  padding: 20px 15px;
+  border-radius: 15px;
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.1),
+    0 0 25px rgba(212, 175, 55, 0.5),
+    0 0 25px rgba(212, 175, 55, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.judge-card::before,
+.judge-card::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 8px;
+  background: linear-gradient(135deg, #d4af37, #f4d03f);
+  opacity: 0;
+  transition: opacity 0.4s ease, width 0.4s ease;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.7);
+  border-radius: 2px;
+}
+
+/* Top right diagonal line - cuts the corner */
+.judge-card::before {
+  top: 50px;
+  right: -10px;
+  transform-origin: right center;
+  transform: rotate(45deg);
+}
+
+/* Bottom left diagonal line - cuts the corner */
+.judge-card::after {
+  bottom: 50px;
+  left: -10px;
+  transform-origin: left center;
+  transform: rotate(45deg);
+}
+
+.judge-card-link:hover .judge-card::before,
+.judge-card:hover::before {
+  opacity: 1;
+  width: 100px;
+}
+
+.judge-card-link:hover .judge-card::after,
+.judge-card:hover::after {
+  opacity: 1;
+  width: 100px;
+}
+
+.hover-warning {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(11, 60, 120, 0.20);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.hover-warning span {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+.judge-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.judge-card-link:hover .judge-card,
+.judge-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.judge-card-link:hover .hover-warning {
+  opacity: 1;
+}
+
+.judge-bubble {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #d4af37;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+  transition: all 0.4s ease;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(#d4af37, #d4af37) border-box;
+}
+
+.judge-card-link:hover .judge-bubble,
+.judge-card:hover .judge-bubble {
+  border: 4px solid transparent;
+  box-shadow: 
+    0 0 20px rgba(212, 175, 55, 0.6),
+    0 0 40px rgba(212, 175, 55, 0.4),
+    0 8px 25px rgba(212, 175, 55, 0.3);
+  background: 
+    linear-gradient(white, white) padding-box,
+    linear-gradient(
+      135deg,
+      #d4af37 0%,
+      #f4d03f 25%,
+      #d4af37 50%,
+      #f4d03f 75%,
+      #d4af37 100%
+    ) border-box;
+  background-size: 200% 200%;
+  animation: golden-shimmer 3s linear infinite;
+}
+
+.judge-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.judge-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #d4af37;
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.judge-card-link:hover .judge-name,
+.judge-card:hover .judge-name {
+  color: #b8941f;
+}
+
+.flag {
+  width: 24px;
+  height: 18px;
+  margin-left: 8px;
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  position: relative;
+  vertical-align: middle;
+}
+
+/* Italy Flag - Green, White, Red */
+.flag-italy {
+  background: linear-gradient(to right, 
+    #009246 0%, #009246 33.33%, 
+    #ffffff 33.33%, #ffffff 66.66%, 
+    #ce2b37 66.66%, #ce2b37 100%);
+}
+
+
+
+/* Sweden Flag - Blue with Yellow Cross */
+.flag-sweden {
+  background: #006aa7;
+}
+.flag-sweden::before,
+.flag-sweden::after {
+  content: '';
+  position: absolute;
+  background: #fecc00;
+}
+.flag-sweden::before {
+  top: 0;
+  left: 6px;
+  width: 3px;
+  height: 100%;
+}
+.flag-sweden::after {
+  top: 7px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+/* Norway Flag - Red, White, Blue Cross */
+.flag-norway {
+  background: #ef2b2d;
+}
+.flag-norway::before,
+.flag-norway::after {
+  content: '';
+  position: absolute;
+}
+.flag-norway::before {
+  top: 0;
+  left: 6px;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to right, 
+    #ffffff 0%, #ffffff 40%, 
+    #002868 40%, #002868 60%, 
+    #ffffff 60%, #ffffff 100%);
+}
+.flag-norway::after {
+  top: 6px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(to bottom, 
+    #ffffff 0%, #ffffff 33%, 
+    #002868 33%, #002868 67%, 
+    #ffffff 67%, #ffffff 100%);
+}
+
+/* Poland Flag - White and Red */
+.flag-poland {
+  background: linear-gradient(to bottom, 
+    #ffffff 0%, #ffffff 50%, 
+    #dc143c 50%, #dc143c 100%);
+}
+
+/* Estonia Flag - Blue, Black, White */
+.flag-estonia {
+  background: linear-gradient(to bottom, 
+    #0072ce 0%, #0072ce 33.33%, 
+    #000000 33.33%, #000000 66.66%, 
+    #ffffff 66.66%, #ffffff 100%);
+}
+
+.judge-title {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.judge-category {
+  font-size: 0.9rem;
+  color: #ffc400;
+  font-weight: bold;
+  background: #fff3cd;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 15px;
+  border: 2px solid #ffc400;
+}
+
+/* Trainee Judge Section */
+.judges-trainee {
+  padding: 40px 20px;
+  background: #f8f9fa;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Trainee card inherits all dimensions from .judge-card */
+/* Only override what's different: add blue glow instead of golden */
+.judge-trainee-card {
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.1),
+    0 0 20px rgba(11, 60, 120, 0.4),
+    0 0 20px rgba(20, 95, 179, 0.2) !important;
+}
+
+.judge-trainee-card::before,
+.judge-trainee-card::after {
+  display: none !important;
+}
+
+/* Remove glow effects from trainee card bubble and change color to blue */
+.judge-trainee-card .judge-bubble {
+  border: 4px solid #0b3c78 !important;
+  box-shadow: 0 6px 20px rgba(11, 60, 120, 0.3) !important;
+  animation: none !important;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(#0b3c78, #0b3c78) border-box !important;
+}
+
+.judge-trainee-card:hover .judge-bubble {
+  border: 4px solid #0b3c78 !important;
+  box-shadow: 0 6px 20px rgba(11, 60, 120, 0.3) !important;
+  animation: none !important;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(#0b3c78, #0b3c78) border-box !important;
+}
+
+/* Change trainee name color to blue and make it smaller */
+.judge-trainee-card .judge-name {
+  color: #0b3c78 !important;
+  font-size: 1.15rem !important;
+}
+
+.judge-trainee-card:hover .judge-name {
+  color: #145fb3 !important;
+}
+
+/* Make trainee bubble smaller */
+.judge-trainee-card .judge-bubble {
+  width: 120px !important;
+  height: 120px !important;
+}
+
+/* Make trainee title text smaller */
+.judge-trainee-card .judge-title {
+  font-size: 0.9rem !important;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .judges-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .judges-hero p {
+    font-size: 0.95rem;
+  }
+  
+  .judges-hero {
+    padding: 30px 20px 25px;
+  }
+  
+  /* 6x1 layout for mobile */
+  .judges-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+  }
+  
+  .judge-bubble {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .judge-name {
+    font-size: 1.2rem;
+  }
+  
+  .judges-grid-section {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .judge-card {
+    padding: 18px 12px;
+  }
+  
+  .judge-bubble {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .judges-hero {
+    padding: 25px 15px 20px;
+  }
+}
