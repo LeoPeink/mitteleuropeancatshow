@@ -256,3 +256,156 @@
   color: #333;
   font-weight: 600;
 }
+
+@media (max-width: 480px) {
+
+  /* 1) Grid: una colonna reale */
+  .program-schedule {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* 2) Card giornate */
+  .day-schedule h2 {
+    font-size: 1.3rem !important;
+    padding: 16px !important;
+  }
+
+  .schedule-timeline {
+    padding: 15px !important;
+  }
+
+  /* 3) Timeline verticale pulita */
+  .time-slot {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px;
+    padding: 12px 0 !important;
+  }
+
+  /* Rimuoviamo margini negativi che su mobile rompono tutto */
+  .time-slot:hover,
+  .time-slot.highlight,
+  .time-slot.important {
+    margin: 0 !important;
+    padding: 12px 0 !important;
+  }
+
+  /* 4) Colonna orario */
+  .time {
+    min-width: unset !important;
+    margin-right: 0 !important;
+    font-size: 0.95rem;
+  }
+
+  .activity {
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+
+  /* 5) Participation box */
+  .participation-rules {
+    padding: 20px !important;
+  }
+
+  .participation-rules h2 {
+    font-size: 1.4rem !important;
+  }
+
+  .participation-rules h3 {
+    font-size: 1.1rem !important;
+  }
+
+  /* 6) Griglie secondarie */
+  .vet-info-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  /* 7) Rimuove hover effects invasivi su mobile */
+  .day-schedule:hover,
+  .rule-item:hover,
+  .vet-requirement:hover {
+    transform: none !important;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  /* Contenitore egida: colonna, senza overflow */
+  .aegis-section{
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Righe gatti: flex wrap, centrato */
+  .aegis-cats-left,
+  .aegis-cats-right{
+    width: 100%;
+    max-width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Bubble dei gatti: dimensione mobile */
+  .aegis-cat-bubble{
+    width: 72px !important;
+    height: 72px !important;
+    flex: 0 0 72px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+  }
+
+  .aegis-cat-bubble img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  /* Bubble "Sotto egida" */
+  .aegis-bubble{
+    width: 100% !important;
+    max-width: 360px !important;
+    box-sizing: border-box !important;
+    padding: 12px 14px !important;
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  .aegis-bubble p{
+    margin-bottom: 10px !important;
+    font-size: 0.95rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Loghi: wrap e dimensioni ridotte */
+  .aegis-logos{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+
+  .aegis-logo{
+    height: 34px !important;
+    width: auto !important;
+    max-width: 45vw !important; /* evita che un logo spinga fuori */
+    display: block !important;
+  }
+}
