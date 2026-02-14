@@ -361,6 +361,10 @@
     padding: 0 !important;
   }
 
+  .aegis-cats-right{
+    margin-bottom: 12px !important;
+  }
+
   /* Bubble dei gatti: dimensione mobile */
   .aegis-cat-bubble{
     width: 72px !important;
@@ -384,7 +388,9 @@
     box-sizing: border-box !important;
     padding: 12px 14px !important;
     text-align: center !important;
-    margin: 0 !important;
+    margin: 12px auto 0 auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
   .aegis-bubble p{
