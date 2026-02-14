@@ -17,6 +17,12 @@
   z-index: 1;
 }
 
+@media (max-width: 1300px) {
+  .hero-banner {
+    padding-top: 10px;
+  }
+}
+
 .hero-banner::before {
   content: '';
   position: absolute;

@@ -36,6 +36,12 @@ body {
   padding: 0px 175px;
 }
 
+@media (max-width: 768px) {
+  .content-section {
+    padding: 0 20px;
+  }
+}
+
 .content-section h2 {
   font-size: 2rem;
   margin-bottom: 30px;

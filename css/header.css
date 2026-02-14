@@ -288,7 +288,7 @@
 }
 
 /* Responsive Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
   .header {
     flex-wrap: wrap;
     min-height: auto;
@@ -385,6 +385,9 @@
     text-align: center;
     margin-top: 10px;
   }
+    .hero-banner{
+    margin-top:80px
+  }
 }
 
 @media (max-width: 480px) {
@@ -392,6 +395,9 @@
     padding: 0 0.5rem;
   }
 
+  .hero-banner{
+    margin-top:70px
+  }
   .menu-toggle {
     font-size: 12px;
     padding: 6px 12px;
@@ -400,4 +406,5 @@
   .logo img {
     max-height: 50px;
   }
+
 }
